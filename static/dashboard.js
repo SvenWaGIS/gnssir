@@ -278,4 +278,14 @@ async function uploadNMEA() {
   }
   
 
-refreshDropdown();
+  async function startup() {
+    await refreshDropdown();
+    const select = document.getElementById("stationSelect");
+    if (select.options.length > 0) {
+      select.selectedIndex = 0;
+      await loadConfig();
+      updateSelectedStation(select.value);
+    }
+  }
+  
+  window.addEventListener("DOMContentLoaded", startup);
