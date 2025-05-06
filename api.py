@@ -9,7 +9,7 @@
 
 from fastapi import FastAPI, UploadFile, File, Request, Form
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from typing import List
 from datetime import datetime, timedelta
 import subprocess
@@ -45,6 +45,29 @@ app = FastAPI()
 @app.get("/")
 def index():
     return FileResponse("static/index.html")
+# Mount static folder at /static
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+#-------------- TEST FOLDER STRUCT ------------------------------------------------------
+@app.get("/test_refl_code")
+def test_refl_code():
+    base_dir = "/app/refl_code"
+
+    # Test write
+    try:
+        os.makedirs(base_dir, exist_ok=True)
+        test_file = os.path.join(base_dir, "test.txt")
+        with open(test_file, "w") as f:
+            f.write("Hello from Render!")
+
+        # Test read
+        with open(test_file, "r") as f:
+            content = f.read()
+
+        return JSONResponse(content={"status": "ok", "read_content": content})
+    except Exception as e:
+        return JSONResponse(content={"status": "error", "message": str(e)})
+#----------------------------------------------------------------------------------------
 
 # Log files
 @app.get("/log_files/")
