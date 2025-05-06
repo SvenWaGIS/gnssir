@@ -8,9 +8,9 @@ WORKDIR /app
 RUN git clone --recurse-submodules https://github.com/SvenWaGIS/gnssir.git . 
 
 # Install Python dependencies
-RUN pip install --no-cache-dir fastapi[standard]==0.113.0 \
-    uvicorn[standard]==0.27.1 \
-    python-multipart==0.0.9
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 # Expose port
 EXPOSE 8000
