@@ -135,6 +135,37 @@ async function saveConfig() {
   document.getElementById("configSection").style.display = "none";
 }
 
+async function populateDropdown(url, dropdownId) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const dropdown = document.getElementById(dropdownId);
+    dropdown.innerHTML = "";
+    const key = dropdownId.includes("snr") ? "snr_files" : "nmea_files";
+
+    data[key].forEach(file => {
+      const option = document.createElement("option");
+      option.value = file;
+      option.textContent = file;
+      dropdown.appendChild(option);
+    });
+  } catch (err) {
+    console.error("Failed to fetch files:", err);
+  }
+}
+
+function refreshFileDropdowns() {
+  const station = "MYC2"; // Replace or read dynamically
+  const year = "2025";    // Replace or read dynamically
+
+  populateDropdown(`/list_snr_files_for_station?station=${station}&year=${year}`, "snrDropdown");
+  populateDropdown(`/list_nmea_files_for_station?station=${station}&year=${year}`, "nmeaDropdown");
+}
+
+// Automatically load on page load
+window.addEventListener("DOMContentLoaded", refreshFileDropdowns);
+
+
 async function loadLogList() {
   const station = document.getElementById("stationSelect").value;
   const res = await fetch(`/log_files?station=${station}`);

@@ -51,7 +51,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 #-------------- TEST FOLDER STRUCT ------------------------------------------------------
 @app.get("/test_refl_code")
 def test_refl_code():
-    base_dir = "/app/refl_code"
+    base_dir = "refl_code"
 
     # Test write
     try:
@@ -110,12 +110,12 @@ async def get_dashboard():
 # Config files
 @app.get("/list_configs")
 def list_configs():
-    config_files = glob.glob("/configs/*.json")
+    config_files = glob.glob("configs/*.json")
     return [os.path.basename(f).replace(".json", "") for f in config_files]
 
 @app.post("/create_config")
 def create_config(station: str):
-    path = f"/configs/{station}.json"
+    path = f"configs/{station}.json"
     if os.path.exists(path):
         return {"error": "Config already exists"}
     default_config = {
@@ -144,7 +144,7 @@ def create_config(station: str):
 
 @app.delete("/delete_config")
 def delete_config(station: str):
-    path = f"/configs/{station}.json"
+    path = f"configs/{station}.json"
     if not os.path.exists(path):
         return {"error": "Config not found"}
     os.remove(path)
@@ -152,7 +152,7 @@ def delete_config(station: str):
 
 @app.get("/get_config")
 def get_config(station: str):
-    path = f"/configs/{station}.json"
+    path = f"configs/{station}.json"
     if not os.path.exists(path):
         return {"error": "Config not found"}
     with open(path) as f:
@@ -160,7 +160,7 @@ def get_config(station: str):
 
 @app.post("/set_config")
 def set_config(station: str, config: dict):
-    path = f"/configs/{station}.json"
+    path = f"configs/{station}.json"
     with open(path, "w") as f:
         json.dump(config, f, indent=2)
     return {"status": "saved"}
