@@ -55,6 +55,9 @@ def download_nmea_from_url(url: str, local_path: str) -> str:
 
 # api endpoints:
 app = FastAPI()
+@app.get("/")
+def index():
+    return FileResponse("static/index.html")
 
 # Log files
 @app.get("/log_files/")
