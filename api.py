@@ -40,19 +40,6 @@ def cleanup_old_logs():
             if (datetime.utcnow() - file_mtime).days > 7:
                 os.remove(file)
 
-#------------------------------------------ TEST DOWLOAD FROM TRANSFER.SH
-def download_nmea_from_url(url: str, local_path: str) -> str:
-    response = requests.get(url)
-    if response.status_code != 200:
-        raise Exception(f"Failed to download: {response.status_code}")
-
-    filename = url.split("/")[-1]
-    full_path = os.path.join(local_path, filename)
-    with open(full_path, "w") as f:
-        f.write(response.text)
-    return filename
-#--------------------------------------------------------------------------
-
 # api endpoints:
 app = FastAPI()
 @app.get("/")
@@ -198,43 +185,6 @@ async def upload_file(file: UploadFile = File(...), request: Request = None):
         "filename": file.filename,
         "snr_files": snr_file_list,
     }
-
-#-------------------------------------------------------TEST DOWLOAD FROM TRANSFER.SH
-@app.post("/upload_from_url")
-async def upload_from_url(file_url: str = Form(...)):
-    os.makedirs(UPLOAD_DIR, exist_ok=True)
-
-    try:
-        filename = download_nmea_from_url(file_url, UPLOAD_DIR)
-    except Exception as e:
-        return {"status": "error", "detail": str(e)}
-
-    file_path = os.path.join(UPLOAD_DIR, filename)
-    with open(file_path, "rb") as f:
-        contents = f.read()
-
-    # Re-wrap like a real UploadFile
-    file_stream = BytesIO(contents)
-    simulated_file = StarletteUploadFile(filename=filename, file=file_stream)
-
-    # Process the file
-    response = await process_nmea(nmea_files=[simulated_file])
-
-    # Extract latest SNR info
-    snr_file_list = []
-    if isinstance(response, dict):
-        for key in ["snr_files", "generated_snr_files"]:
-            if key in response:
-                snr_file_list = response[key]
-                break
-
-    return {
-        "status": "processed_from_url",
-        "filename": filename,
-        "source_url": file_url,
-        "snr_files": snr_file_list,
-    }
-#------------------------------------------------------------------------------------------
 
 # Process data with nmea2snr 
 @app.post("/process/")
