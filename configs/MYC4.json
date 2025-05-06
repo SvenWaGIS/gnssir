@@ -1,0 +1,20 @@
+{
+  "latitude": null,
+  "longitude": null,
+  "height": null,
+  "gzip": false,
+  "overwrite": true,
+  "snr": "",
+  "year_end": "",
+  "doy_end": "",
+  "dec": "",
+  "risky": false,
+  "par": "",
+  "orb": "",
+  "hour": "",
+  "debug": false,
+  "merge_hours": 6,
+  "nmea_retention_hours": 24,
+  "snr_retention_days": 1,
+  "rawdata_retention_days": 7
+}

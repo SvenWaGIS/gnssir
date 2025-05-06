@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GNSS Config Dashboard</title>
+  <script src="/static/dashboard.js" defer></script>
+</head>
+<body>
+  <h1>GNSS Station Config</h1>
+
+  <label for="stationSelect">Station:</label>
+  <select id="stationSelect"></select>
+  <button onclick="loadConfig()">Load</button>
+  <button onclick="createConfig()">New Config</button>
+  <button onclick="deleteConfig()">Delete</button>
+
+  <hr>
+
+  <form id="configForm"></form>
+
+  <button onclick="addField()">Add Field</button>
+  <button onclick="saveConfig()">Save Config</button>
+
+  <hr>
+<h3>Logs</h3>
+<select id="logFileSelect"></select>
+<button onclick="downloadLog()">Download Selected Log</button>
+
+<br><br>
+<textarea id="logPreview" rows="15" cols="100" readonly placeholder="Log contents will appear here..."></textarea>
+
+
+<hr>
+<h3>Upload Test NMEA File</h3>
+<input type="file" id="nmeaFileInput" multiple />
+<button onclick="uploadNMEA()">Upload</button>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gnssir-webserver
+    env: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: UVICORN_PORT
+        value: "8000"

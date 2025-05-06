@@ -1,0 +1,20 @@
+{
+  "latitude": 48.721007389,
+  "longitude": 9.342556711,
+  "height": 298.648,
+  "snr": 66,
+  "year_end": null,
+  "doy_end": null,
+  "dec": null,
+  "par": null,
+  "orb": null,
+  "hour": null,
+  "merge_hours": 4,
+  "nmea_retention_hours": 48,
+  "snr_retention_days": 4,
+  "rawdata_retention_days": 3,
+  "gzip": false,
+  "overwrite": true,
+  "risky": false,
+  "debug": false
+}

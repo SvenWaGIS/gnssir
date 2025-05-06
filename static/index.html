@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GNSS Dashboard</title>
+  <script src="dashboard.js" defer></script>
+  <style>
+    label {
+      display: inline-block;
+      width: 150px;
+      margin-top: 8px;
+    }
+    input, select, textarea, button {
+      margin: 4px 0;
+    }
+    textarea {
+      width: 100%;
+    }
+    hr {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>GNSS Station Dashboard</h2>
+
+<h2 id="currentStationLabel" style="text-align:center; color:darkblue;">Selected Station: None</h2>
+
+
+<!-- Station Selection -->
+<div>
+  <label for="stationSelect"><strong>Select Station:</strong></label>
+  <select id="stationSelect" onchange="loadConfig()"></select>
+  <button onclick="createConfig()">Add Station</button>
+  <button onclick="deleteConfig()">Delete Station</button>
+</div>
+
+<!-- Toggle Config Visibility -->
+<div>
+  <button onclick="toggleConfig()">Show/Hide Config</button>
+</div>
+
+<!-- Config Editor -->
+<div id="configSection" style="display:none; margin-top: 10px;">
+  <h3>Configuration</h3>
+  <form id="configForm"></form>
+  <button id="addFieldBtn" onclick="addField()" type="button">Add Field</button>
+  <button id="saveConfigBtn" onclick="saveConfig()" type="button">Save Config</button>
+</div>
+
+<hr>
+
+<!-- NMEA-File Upload -->
+<div>
+  <h3>Upload NMEA Files</h3>
+  <input type="file" id="nmeaFileInput" multiple style="width: 100%;">
+  <button onclick="uploadNMEA()">Upload</button>
+</div>
+
+<hr>
+<!-- Automatic Upload -->
+<form id="uploadForm">
+  <input type="file" name="file" id="fileInput" />
+  <button type="submit">Upload NMEA File</button>
+</form>
+<p id="lastUploadStatus"><em>No recent upload</em></p>
+<p id="lastSnrStatus"><em>No recent SNR file</em></p>
+<script>
+  document.getElementById("uploadForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fileInput = document.getElementById("fileInput");
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+
+    const response = await fetch("/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+    
+    // Update file upload feedback
+    document.getElementById("lastUploadStatus").textContent =
+      "Last uploaded file: " + result.filename;
+
+    if (result.snr_files && result.snr_files.length > 0) {
+      document.getElementById("lastSnrStatus").textContent =
+        "Last SNR file: " + result.snr_files[result.snr_files.length - 1];
+    } else {
+      document.getElementById("lastSnrStatus").textContent = "No SNR file created.";
+    }
+
+    alert("Uploaded: " + result.filename);
+  });
+</script>
+
+<!-- Logs Section -->
+<div>
+  <h3>Logs</h3>
+  <label for="logFileSelect">Log File:</label>
+  <select id="logFileSelect"></select>
+  <button onclick="downloadLog()">Download Log</button>
+  <br><br>
+  <textarea id="logPreview" style="width:100%; height:300px;"></textarea>
+</div>
+
+
+</body>
+</html>

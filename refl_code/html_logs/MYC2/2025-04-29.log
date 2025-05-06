@@ -1,0 +1,129 @@
+Timestamp: 2025-04-29T12:56:24.063553
+Uploaded files: ['ZED_MYC2_2025_2_8_04.txt']
+Merged files:
+/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_03.txt
+/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_04.txt
+SNR Output:
+No output
+Errors:
+None
+----------------------------------------
+Timestamp: 2025-04-29T13:07:31.086498
+Uploaded files: ['ZED_MYC2_2025_2_8_06.txt']
+Merged files:
+/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_05.txt
+/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_06.txt
+nmea2snr Command:
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+SNR Status:Generated 1 file(s):
+MYC20390.25.snr66
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpwvj5p36r/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  264066442.txt ... Found  7187  time tags ... myc2 264066442.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  5.15  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T13:26:32.341860
+Uploaded files: ['ZED_MYC2_2025_2_8_00.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_00.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpsh19zvh2/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  053625057.txt ... Found  3595  time tags ... myc2 053625057.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  2.64  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T13:38:04.000912
+Uploaded files: ['ZED_MYC2_2025_2_8_00.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_00.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpq0mufbx0/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  858117515.txt ... Found  3595  time tags ... myc2 858117515.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  2.59  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T13:43:55.645811
+Uploaded files: ['ZED_MYC2_2025_2_8_01.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_00.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_01.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmphijnu4cc/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  978780114.txt ... Found  7187  time tags ... myc2 978780114.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  5.28  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T13:58:28.141293
+Uploaded files: ['ZED_MYC2_2025_2_8_01.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_00.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_01.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpypxh7n68/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  170237032.txt ... Found  7187  time tags ... myc2 170237032.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  5.62  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T13:58:48.830304
+Uploaded files: ['ZED_MYC2_2025_2_8_00.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_00.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpnun6uicm/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  212305523.txt ... Found  3595  time tags ... myc2 212305523.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  2.66  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T14:52:36.188269
+Uploaded files: ['ZED_MYC2_2025_2_8_03.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_02.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_03.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmp_3607wht/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  287201753.txt ... Found  7189  time tags ... myc2 287201753.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  5.65  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T15:15:08.689751
+Uploaded files: ['ZED_MYC2_2025_2_8_22.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_21.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_22.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpulrh39hb/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  944441993.txt ... Found  7139  time tags ... myc2 944441993.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  3.96  seconds
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T15:29:50.625009
+Uploaded files: ['ZED_MYC2_2025_2_8_07.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_06.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_07.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: None
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T15:36:56.676719
+Uploaded files: ['ZED_MYC2_2025_2_8_08.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_07.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_08.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: None
+Errors: None
+----------------------------------------
+Timestamp: 2025-04-29T15:40:17.406127
+Uploaded files: ['ZED_MYC2_2025_2_8_01.txt']
+nmea2snr MYC2 2025 039 -lat 48.721007389 -lon 9.342556711 -height 298.648 -snr 66 -gzip false -overwrite true -risky false -debug false
+Merged files:
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_00.txt
+	/etc/gnssrefl/refl_code/data_safe/rawdata/2025/MYC2/ZED_MYC2_2025_2_8_01.txt
+SNR Status: Generated 1 file(s):
+	[MYC20390.25.snr66]
+Stdout: gnssrefl version: 3.11.0  ...  ... Cartesian coordinates  [4160074.4156043595, 684411.4721894292, 4770371.406463764] ... No parallel processing ... Try Rapid orbit products from GFZ  ... Found a sp3 file:  /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... tmpfpath:  /tmp/tmpiyg753vp/MYC20390.25.A ... fpath:  /etc/gnssrefl/refl_code/nmea/MYC2/2025/MYC20390.25.A ... Leap second offset  18 ... Opening temporary file :  036011719.txt ... Found  7187  time tags ... myc2 036011719.txt /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... /etc/gnssrefl/refl_code/2025/sp3/GFZ0OPSRAP_20250390000_01D_05M_ORB.SP3 ... removing temporary file ... SUCCESS: SNR file created /etc/gnssrefl/refl_code/2025/snr/MYC2/MYC20390.25.snr66 ... That took  5.5  seconds
+Errors: None
+----------------------------------------
