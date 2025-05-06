@@ -48,13 +48,24 @@ async function refreshDropdown() {
   const stations = await res.json();
   const select = document.getElementById("stationSelect");
   select.innerHTML = "";
+
   stations.forEach(station => {
     const option = document.createElement("option");
     option.value = station;
     option.textContent = station;
     select.appendChild(option);
   });
+
+  // ✅ If there's at least one station, select the first and load its config
+  if (stations.length > 0) {
+    select.selectedIndex = 0;
+    await loadConfig();
+    updateSelectedStation(select.value);
+  } else {
+    updateSelectedStation("None");
+  }
 }
+
 
 async function loadConfig() {
     const station = document.getElementById("stationSelect").value;
@@ -288,4 +299,4 @@ async function uploadNMEA() {
     }
   }
   
-  window.addEventListener("DOMContentLoaded", startup);
+  window.addEventListener("DOMContentLoaded", refreshDropdown);
