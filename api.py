@@ -4,7 +4,7 @@
 #get lat/lon/height from SARA txtfile! (and station/date?)
 #fix time in logs to CET
 #display files in dashboard (snr/nmea files!)
-#FREAKIN COMMENT THE CODE MORRON
+#Comment Code
 
 
 from fastapi import FastAPI, UploadFile, File, Request, Form
@@ -175,6 +175,23 @@ def list_snr_files():
 def download_snr(filepath: str):
     full_path = f"/etc/gnssrefl/refl_code/{filepath}"
     return FileResponse(path=full_path, filename=filepath.split("/")[-1])
+
+@app.get("/list_snr_files_for_station")
+def list_snr_files_for_station(station: str, year: str):
+    base_dir = f"/etc/gnssrefl/refl_code/data_safe/snr/{year}/{station}"
+    if not os.path.exists(base_dir):
+        return {"snr_files": []}
+    files = sorted(os.listdir(base_dir))
+    return {"snr_files": files}
+
+@app.get("/list_nmea_files_for_station")
+def list_nmea_files_for_station(station: str, year: str):
+    base_dir = f"/etc/gnssrefl/refl_code/data_safe/nmea/{year}/{station}"
+    if not os.path.exists(base_dir):
+        return {"nmea_files": []}
+    files = sorted(os.listdir(base_dir))
+    return {"nmea_files": files}
+
 
 # File upload from SARA-R5
 UPLOAD_DIR = "Webserver/uploads"
