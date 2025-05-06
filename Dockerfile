@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 # Clone your full repo with submodules
 WORKDIR /app
 COPY . /app
-RUN git submodule update --init --recursive
 
 # Install Python dependencies
 COPY requirements.txt .
